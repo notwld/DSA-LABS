@@ -219,9 +219,8 @@ class PriorityQueue:
     #arbirtray attributes can not be added in __slots__ unlike in __dict__ though
     def show(self):
         for i in self._qList:
-            print("items, priority ",i.item,i.priority)
+            print((i.item,i.priority))
 class PriorityQEntry(object):
-        
     def __init__(self, item, priority):
         self.item = item
         self.priority = priority
@@ -230,65 +229,79 @@ obj = PriorityQueue()
 obj.enqueue("student",3)
 obj.enqueue("professor",2)
 obj.enqueue("deen",1)
-obj.dequeue()
-obj.dequeue()
+
 obj.show()
 
 #Task-5
-class PriorityLLQueue:
-    def __init__(self):
-        self._qhead = None
-        self._qtail = None
-        self._count = 0
+class PNode:
+    def _init_(self, data,priority):
+        self.data = data
+        self.next = None
+        self.priority = priority
 
-    def isEmpty(self):
-        return self._qhead is None
+class PQueue:
+    def _init_(self):
+        self.qhead = None
+        self.qtail = None
+        self.size = 0
 
     def _len_(self):
-        return self._count
+        return self.size
+    
+    def isEmpty(self):
+        return self.size == 0
 
-    def enqueue(self, item, priority):
-        """Priority is the key for the queue"""
-        node = _PriorityLLNode(item, priority)
+    def enqueue(self,data,priority):
+        newNode = PNode(data,priority)
         if self.isEmpty():
-            self._qhead = node
+            self.qhead = newNode
+            self.qtail = newNode
         else:
-            self._qtail.next = node
+            if newNode.priority < self.qhead.priority:
+                newNode.next = self.qhead
+                self.qhead = newNode
+            else:
+                temp = self.qhead
+                while temp.next != None and temp.next.priority < newNode.priority:
+                    temp = temp.next
+                newNode.next = temp.next
+                temp.next = newNode
+                if temp == self.qtail:
+                    self.qtail = newNode
 
-        self._qtail = node
-        self._count += 1
-    
-    def dequeue(self):
-        assert not self.isEmpty(), "Empty queue"
-        node = self._qhead
-        if self._qhead is self._qtail:
-            self._qtail = None
-        self._qhead = self._qhead.next
-        self._count -= 1
-        return node.item
-
-    def peek(self):
-        assert not self.isEmpty(), "Empty queue"
-        return self._qhead.item
-    
-    def traverse(self):
-        node = self._qhead
-        while node is not None:
-            print(node.item)
-            node = node.next
-
-class _PriorityLLNode(object):
-    def __init__(self, item, priority):
-        self.item = item
-        self.priority = priority
-        self.next = None
+        self.size += 1
         
-obj = PriorityLLQueue()
-obj.enqueue("student",1)
-obj.enqueue("professor",2)
-obj.dequeue()
-obj.traverse()
+    def dequeue(self):
+        assert not self.isEmpty(),"Empty Queue"
+        if self.qhead == self.qtail:
+            self.qhead = None
+            self.qtail = None
+            return
+        self.qhead = self.qhead.next
+        self.size -= 1
 
+    def peak(self):
+        assert not self.isEmpty(),"Empty Queue"
+        return self.qhead.data
+
+    def traverse(self):
+        cur = self.qhead
+        while cur:
+            print(cur.data,end="-->")
+            cur = cur.next
+        print(None)
+
+
+
+
+
+
+pq = PQueue()
+pq.enqueue("iwa",1)
+pq.enqueue("owo",2)
+pq.enqueue("uwu",3)
+pq.enqueue("chuza",1)
+pq.traverse()
 #Task-6
 
 class Queue:
