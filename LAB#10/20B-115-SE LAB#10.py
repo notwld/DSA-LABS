@@ -87,7 +87,13 @@ class linked:
             print(node.data)
             
             node = node.prev
-            
+    def search(self,data):
+        itr = self.head
+        while itr:
+            if itr.data == data:
+                return True
+            itr= itr.next
+        return False
     def remove(self,data):
         
         if data == self.head.data:
@@ -123,8 +129,9 @@ obj.insert(5)
 obj.insertatEnd(-1)
 obj.remove(3)
 obj.traverse()
-print("-----------------------------")
+print(obj.search(4))
 obj.traverseReverse()
+print("-----------------------------")
 
 #TASK 02
 class CircularQueue:
@@ -375,13 +382,5 @@ mll.createChild(1,2)
 mll.createChild(1,3)
 mll.createChild(1,8)
 mll.createChild(1,9)
-mll.createChild(2,4)
-mll.createChild(2,5)
-mll.createChild(3,6)
-mll.createChild(3,7)
-mll.createChild(2,10)
-mll.createChild(2,11)
-mll.createChild(11,12)
-mll.createChild(13,14)
 print("\n")
 mll.printList()
