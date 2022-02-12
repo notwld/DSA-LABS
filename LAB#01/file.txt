@@ -1,0 +1,65 @@
+
+
+
+
+
+
+
+
+
+Do you want to store full name of the receiver/sender?
+Will you enter accurate data only?
+Do you want to take username for the input?
+Are you sure that input data is not illegal?
+Do you want to store history for sending emails?
+Do you want to store every complain you receive?
+Are you sure that output data will not be illegal?
+Are you sure that the output data is useful?
+Do you want to organize those emails you receive?
+Are you sure the stored data will be useful in future?
+Do you want the stored data an easy access?
+Will you make sure that the data is not redundant in multiple places?
+Are services provided by the current system are ‘cost effective’?
+Could there be a reduction in costs and/or an increase in benefits?
+Do you think your budget is enough to bear the expenses of this software?
+Do you want to reduce the maintenance fees of your software?
+Are you willing to sell this software to other companies to maximize your profit?
+Do you think this software is secure to use?
+Do you think this software is free from any kind of malwares and viruses?
+Are you facing any kind of decision-making errors from the software?
+Do you see any errors in Processing?
+Do you think the software is safe and secure for your clients?
+Are you facing any kind of bugs while using the software?
+Does the software get slow when you’re using it or customizing the security controls?
+Do you think software have too many security controls that can slow down your processing?
+Do you trust the software for your private data?
+Are you worried about getting your data hacked from the software?
+Do you think this software is efficient?
+Are excessive data entries slowing down the software?
+Do you think software have unnecessary processes? If yes, then do want to remove such
+procedures?
+Do you think this software is time consuming?
+Is this software user-friendly?
+Do you think this software requires plenty of cost to setup?
+Is the software compatible with other devices with-in your work space?
+Do you think we can reduce the size of the software?
+Are you satisfied by the service\speed of the system?
+Is the system providing inaccurate results?
+Are you facing any problem\issue in sending or receiving emails?
+Do you trust this system with your data?
+Do you think we can make this software more user-friendly?
+Are your employees finding this software easy to learn?
+Do you think we should add new features in the system over the period of time?
+Does the system crash in exceptional situations?
+Do you think we should make the system more compatible with other devices?
+Does the system lags in performance while running on different devices
+simultaneously?
+Does this software help you in your job or not?
+
+
+
+
+
+
+
+
