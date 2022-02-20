@@ -128,7 +128,7 @@ class Person:
         return self._name
 
 
-obj = Person("waleed",20)
+obj = Person("goju saturo",20)
 print(obj.birthday())
 
 
